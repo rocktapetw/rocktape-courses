@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCKTAPE Taiwan | 洛克貼台灣國際培訓證書課程</title>
     <meta name="description" content="2026下半年 ROCKTAPE 國際培訓證書課程總覽。包含肌筋膜軟拔罐、筋膜刀、巫毒帶與振動專家認證課程。">
+    <!-- 引入 Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
@@ -25,18 +26,27 @@
 </head>
 <body class="text-gray-800 antialiased">
 
-    <header class="bg-black text-white text-center py-16 px-4 shadow-lg border-b-4 border-red-600">
-        <h1 class="text-4xl md:text-5xl font-black tracking-wider mb-3">
+    <!-- 頁首 Header -->
+    <header class="bg-black text-white text-center py-12 px-4 shadow-lg border-b-4 border-red-600">
+        <!-- 品牌 LOGO 區塊 -->
+        <div class="flex justify-center mb-6">
+            <!-- 設定高度並使用 object-contain 確保 LOGO 不變形且完整顯示 -->
+            <img src="rocktape logo.jpg" alt="ROCKTAPE Logo" class="h-28 md:h-36 w-auto object-contain bg-white rounded-xl px-2">
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl font-black tracking-wider mb-3">
             <span class="rocktape-red">ROCKTAPE</span> Taiwan
         </h1>
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">洛克貼台灣國際培訓證書課程</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        <h2 class="text-xl md:text-2xl font-bold mb-4">洛克貼台灣國際培訓證書課程</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-md md:text-lg">
             2026 下半年課程總覽 —— 提升您的運動科學專業與臨床實務應用能力
         </p>
     </header>
 
+    <!-- 主要內容區塊 Main Content -->
     <main class="max-w-6xl mx-auto px-4 py-12">
         
+        <!-- 品牌說明 Brand Intro -->
         <div class="bg-white rounded-xl shadow-md p-8 mb-10 border-t-4 border-red-600">
             <h2 class="text-2xl font-bold text-gray-900 mb-5 flex items-center">
                 <span class="text-3xl mr-3">🎓</span> ROCKTAPE Taiwan｜國際培訓證書課程報名專區
@@ -52,8 +62,10 @@
             </div>
         </div>
 
+        <!-- 課程列表 Course Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+            <!-- 課程 1: ROCKPods & Glide -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
                 <img src="pods.jpg" alt="ROCKPods & Glide" class="w-full h-auto block">
                 <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
@@ -77,6 +89,7 @@
                 </div>
             </div>
 
+            <!-- 課程 2: ROCKBlades -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
                 <img src="blades.jpg" alt="ROCKBlades" class="w-full h-auto block">
                 <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
@@ -91,6 +104,7 @@
                 </div>
             </div>
 
+            <!-- 課程 3: ROCKFloss -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
                 <img src="floss.jpg" alt="ROCKFloss" class="w-full h-auto block">
                 <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
@@ -105,6 +119,7 @@
                 </div>
             </div>
 
+            <!-- 課程 4: Vibration Specialist -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
                 <img src="vibration.jpg" alt="Vibration Specialist" class="w-full h-auto block">
                 <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
@@ -122,6 +137,7 @@
         </div>
     </main>
 
+    <!-- 頁尾 Footer -->
     <footer class="bg-black text-gray-500 text-center py-8 mt-8">
         <p class="text-sm">© 2026 OWNLIFE MARKETING CO., LTD. 詠友行銷股份有限公司. All rights reserved.</p>
     </footer>
