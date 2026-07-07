@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCKTAPE Taiwan | 洛克貼台灣國際培訓證書課程</title>
     <meta name="description" content="2026下半年 ROCKTAPE 國際培訓證書課程總覽。包含肌筋膜軟拔罐、筋膜刀、巫毒帶與振動專家認證課程。">
+    <!-- 引入 Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght=400;700;900&display=swap');
@@ -25,6 +26,7 @@
 </head>
 <body class="text-gray-800 antialiased">
 
+    <!-- 頁首 Header -->
     <header class="bg-black text-white text-center py-16 px-4 shadow-lg border-b-4 border-red-600">
         <h1 class="text-4xl md:text-5xl font-black tracking-wider mb-3">
             <span class="rocktape-red">ROCKTAPE</span> Taiwan
@@ -35,12 +37,15 @@
         </p>
     </header>
 
+    <!-- 課程列表 Main Content -->
     <main class="max-w-6xl mx-auto px-4 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+            <!-- 課程 1: ROCKPods & Glide -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col justify-between">
                 <div>
-                    <img src="pods.jpg" alt="ROCKPods & Glide" class="w-full h-48 object-cover bg-gray-200">
+                    <!-- 課程照片：使用 object-contain 確保圖片完整顯示 -->
+                    <img src="pods.jpg" alt="ROCKPods & Glide" class="w-full h-48 object-contain bg-gray-200">
                     <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
                         <h3 class="text-xl font-bold text-white">📌 𝑹𝑶𝑪𝑲𝑷𝒐𝒅𝒔 & 𝑮𝒍𝒊𝒅𝒆</h3>
                         <p class="text-gray-300 text-sm mt-1">肌筋膜軟拔罐認證課程</p>
@@ -63,9 +68,10 @@
                 </div>
             </div>
 
+            <!-- 課程 2: ROCKBlades -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col justify-between">
                 <div>
-                    <img src="blades.jpg" alt="ROCKBlades" class="w-full h-48 object-cover bg-gray-200">
+                    <img src="blades.jpg" alt="ROCKBlades" class="w-full h-48 object-contain bg-gray-200">
                     <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
                         <h3 class="text-xl font-bold text-white">📌 𝑹𝑶𝑪𝑲𝑩𝒍𝒂𝒅𝒆𝒔</h3>
                         <p class="text-gray-300 text-sm mt-1">筋膜刀認證課程</p>
@@ -79,9 +85,10 @@
                 </div>
             </div>
 
+            <!-- 課程 3: ROCKFloss -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col justify-between">
                 <div>
-                    <img src="floss.jpg" alt="ROCKFloss" class="w-full h-48 object-cover bg-gray-200">
+                    <img src="floss.jpg" alt="ROCKFloss" class="w-full h-48 object-contain bg-gray-200">
                     <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
                         <h3 class="text-xl font-bold text-white">📌 𝑹𝑶𝑪𝑲𝑭𝒍𝒐𝒔𝒔 𝑩𝒂𝒔𝒊𝒄＆𝑨𝒅𝒗𝒂𝒏𝒄𝒆𝒅</h3>
                         <p class="text-gray-300 text-sm mt-1">巫毒帶認證課程</p>
@@ -95,9 +102,10 @@
                 </div>
             </div>
 
+            <!-- 課程 4: Vibration Specialist -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col justify-between">
                 <div>
-                    <img src="vibration.jpg" alt="Vibration Specialist" class="w-full h-48 object-cover bg-gray-200">
+                    <img src="vibration.jpg" alt="Vibration Specialist" class="w-full h-48 object-contain bg-gray-200">
                     <div class="bg-gray-900 px-6 py-4 border-l-8 border-red-600">
                         <h3 class="text-xl font-bold text-white">📌 𝑽𝒊𝒃𝒓𝒂𝒕𝒊𝒐𝒏 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒔𝒕</h3>
                         <p class="text-gray-300 text-sm mt-1">振動專家認證課程</p>
@@ -114,6 +122,7 @@
         </div>
     </main>
 
+    <!-- 頁尾 Footer -->
     <footer class="bg-black text-gray-500 text-center py-8 mt-8">
         <p class="text-sm">© 2026 OWNLIFE MARKETING CO., LTD. 詠友行銷股份有限公司. All rights reserved.</p>
     </footer>
