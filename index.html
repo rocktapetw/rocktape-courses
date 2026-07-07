@@ -56,6 +56,13 @@
         .hover-bg-rocktape-red:hover {
             background-color: #c0142e;
         }
+        /* 隱藏 details 預設的三角形 */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="text-gray-800 antialiased relative">
@@ -67,11 +74,9 @@
 
     <!-- 頁首 Header -->
     <header class="bg-black text-white text-center py-12 px-4 shadow-lg border-b-4 border-red-600">
-        <!-- 品牌 LOGO 區塊 -->
         <div class="flex justify-center mb-6">
             <img src="rocktape logo.jpg" alt="ROCKTAPE Logo" class="h-28 md:h-36 w-auto object-contain bg-white rounded-xl px-2">
         </div>
-        
         <h1 class="text-3xl md:text-4xl font-black tracking-wider mb-3">
             <span class="rocktape-red">ROCKTAPE</span> Taiwan
         </h1>
@@ -81,7 +86,6 @@
         </p>
     </header>
 
-    <!-- 主要內容區塊 Main Content -->
     <main class="max-w-6xl mx-auto px-4 py-12">
         
         <!-- 品牌說明 Brand Intro -->
@@ -151,7 +155,6 @@
 
         <!-- 課程列表 Course Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-
             <!-- 課程 1: ROCKPods & Glide -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
                 <img src="pods.jpg" alt="ROCKPods & Glide" class="w-full h-auto block">
@@ -191,7 +194,6 @@
                     <div class="mt-auto pt-4 border-t-2 border-gray-100">
                         <div class="mb-4">
                             <p class="text-gray-700 font-bold mb-2 text-center">📅 2026/8/16 (日) - 台北場</p>
-                            <!-- 埋設 Click_Pods_0816 點擊事件 -->
                             <a href="https://lihi1.me/RQ7F7" target="_blank" onclick="fbq('trackCustom', 'Click_Pods_0816'); dataLayer.push({'event': 'Click_Pods_0816'});" class="block text-center bg-rocktape-red hover-bg-rocktape-red text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md">
                                 👉 立即報名 (8/16)
                             </a>
@@ -199,7 +201,6 @@
                         <hr class="my-3 border-gray-100">
                         <div>
                             <p class="text-gray-700 font-bold mb-2 text-center">📅 2026/10/4 (日) - 台北場</p>
-                            <!-- 埋設 Click_Pods_1004 點擊事件 -->
                             <a href="https://lihi.cc/8la0B" target="_blank" onclick="fbq('trackCustom', 'Click_Pods_1004'); dataLayer.push({'event': 'Click_Pods_1004'});" class="block text-center bg-gray-800 hover:bg-black text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md">
                                 👉 立即報名 (10/4)
                             </a>
@@ -247,7 +248,6 @@
                     </div>
                     <div class="mt-auto pt-4 border-t-2 border-gray-100">
                         <p class="text-gray-700 font-bold mb-4 text-lg text-center">📅 2026/9/5-6 (六-日) - 台北場</p>
-                        <!-- 埋設 Click_Blades_Course 點擊事件 -->
                         <a href="https://lihi.cc/ov7Ak" target="_blank" onclick="fbq('trackCustom', 'Click_Blades_Course'); dataLayer.push({'event': 'Click_Blades_Course'});" class="block text-center bg-rocktape-red hover-bg-rocktape-red text-white font-bold py-3 px-4 rounded text-lg transition duration-200 shadow-md">
                             👉 立即報名
                         </a>
@@ -295,7 +295,6 @@
                     </div>
                     <div class="mt-auto pt-4 border-t-2 border-gray-100">
                         <p class="text-gray-700 font-bold mb-4 text-lg text-center">📅 2026/9/13 (日) - 台北場</p>
-                        <!-- 埋設 Click_Floss_Course 點擊事件 -->
                         <a href="https://lihi.cc/7ZLiC" target="_blank" onclick="fbq('trackCustom', 'Click_Floss_Course'); dataLayer.push({'event': 'Click_Floss_Course'});" class="block text-center bg-rocktape-red hover-bg-rocktape-red text-white font-bold py-3 px-4 rounded text-lg transition duration-200 shadow-md">
                             👉 立即報名
                         </a>
@@ -345,14 +344,152 @@
                     </div>
                     <div class="mt-auto pt-4 border-t-2 border-gray-100">
                         <p class="text-gray-700 font-bold mb-4 text-lg text-center">📅 2026/10/11 (日) - 台北場</p>
-                        <!-- 埋設 Click_Vibration_Course 點擊事件 -->
                         <a href="https://lihi.cc/C20X4" target="_blank" onclick="fbq('trackCustom', 'Click_Vibration_Course'); dataLayer.push({'event': 'Click_Vibration_Course'});" class="block text-center bg-rocktape-red hover-bg-rocktape-red text-white font-bold py-3 px-4 rounded text-lg transition duration-200 shadow-md">
                             👉 立即報名
                         </a>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- FAQ 常見問題 -->
+        <div class="bg-white rounded-xl shadow-md p-8 mb-12 border-t-4 border-gray-800">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 flex items-center justify-center md:justify-start">
+                <span class="text-3xl mr-3">❓</span> FAQ｜常見問題
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- Q1 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：沒有醫療背景可以報名嗎？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        可以。不同課程適合不同背景的學員，若你是健身教練、運動按摩師、瑜珈／皮拉提斯老師、運動愛好者，也可以依照需求選擇適合課程。若不確定從哪一堂開始，歡迎加入 Line 詢問。
+                    </p>
+                </details>
+
+                <!-- Q2 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：課程是純理論還是實作？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        課程包含理論、工具原理、安全禁忌、操作示範與大量實作，重點是讓你能帶回現場使用。
+                    </p>
+                </details>
+
+                <!-- Q3 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：我已經會拔罐／筋膜刀，還需要上課嗎？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        如果你只想學手法，網路上有很多資訊。但如果你想理解工具背後的神經調節、筋膜滑動、疼痛感知與動作整合，系統課程會讓你的操作更安全、更有判斷力。
+                    </p>
+                </details>
+
+                <!-- Q4 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：不知道該報哪一堂怎麼辦？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        歡迎加入 Line 官方帳號，告訴我們你的職業背景、服務對象與想解決的問題，我們會協助你選擇最適合的課程。
+                    </p>
+                </details>
+
+                <!-- Q5 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：課程是否額滿怎麼確認？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        表單會顯示「已額滿」或無法提交；此頁也會同步更新。
+                    </p>
+                </details>
+
+                <!-- Q6 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：早鳥優惠到什麼時候？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        直到該課程名額已滿，或課程開始前 10 天為止。
+                    </p>
+                </details>
+
+                <!-- Q7 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：什麼時候會有其他縣市的場次？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        考量場地資源與講師交通問題，目前皆以「台北場」為主。
+                    </p>
+                </details>
+
+                <!-- Q8 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：可以包班嗎？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        可以，只要你有適合的場地（需具備治療床、投影機）並且約好 10 位同學，就可以聯絡我們安排包班。
+                    </p>
+                </details>
+
+                <!-- Q9 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：證書什麼時候發放？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        課程結束後約 20 個工作天左右，會發送電子證書到您的 Email，並透過 Line 官方帳號通知您。
+                    </p>
+                </details>
+
+                <!-- Q10 -->
+                <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
+                        <span>Q：課後可以買產品嗎？有優惠嗎？</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                        可以！完成證書課的學員都能成為我們的合作夥伴，各項產品都有優惠價，詳細資訊請洽 Line＠客服。
+                    </p>
+                </details>
+
+            </div>
         </div>
 
         <!-- 聯絡方式 Contact Section -->
@@ -361,19 +498,15 @@
                 <span class="text-3xl mr-3">📞</span> 聯絡方式
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-700">
-                <!-- IG -->
                 <a href="https://www.instagram.com/rocktape.tw" target="_blank" class="flex items-center justify-center md:justify-start hover:text-red-600 transition duration-200">
                     <span class="text-2xl mr-3">📸</span> IG：@rocktape.tw
                 </a>
-                <!-- LINE -->
                 <a href="https://lin.ee/AkHEnuo" target="_blank" class="flex items-center justify-center md:justify-start hover:text-red-600 transition duration-200">
                     <span class="text-2xl mr-3">💬</span> Line 官方帳號：點擊加入
                 </a>
-                <!-- Email -->
                 <a href="mailto:rocktape.tw@gmail.com" class="flex items-center justify-center md:justify-start hover:text-red-600 transition duration-200">
                     <span class="text-2xl mr-3">📧</span> Email：rocktape.tw@gmail.com
                 </a>
-                <!-- Website -->
                 <a href="https://www.rocktape.com.tw/" target="_blank" class="flex items-center justify-center md:justify-start hover:text-red-600 transition duration-200">
                     <span class="text-2xl mr-3">🌐</span> 官方網站：www.rocktape.com.tw
                 </a>
@@ -387,9 +520,8 @@
         <p class="text-sm">© 2026 OWNLIFE MARKETING CO., LTD. 詠友行銷股份有限公司. All rights reserved.</p>
     </footer>
 
-<!-- 懸浮客服與社群按鈕群組 -->
+    <!-- 懸浮客服與社群按鈕群組 -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
-        
         <!-- 懸浮 IG 按鈕 -->
         <a href="https://www.instagram.com/rocktape.tw" target="_blank" class="bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-90 text-white font-bold py-3 px-5 rounded-full shadow-2xl flex items-center gap-2 transition-transform transform hover:-translate-y-1">
             <!-- IG SVG Icon -->
@@ -408,5 +540,6 @@
             <span class="text-lg tracking-wide">課程諮詢</span>
         </a>
     </div>
+
 </body>
 </html>
