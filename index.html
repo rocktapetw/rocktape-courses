@@ -63,6 +63,21 @@
         details > summary::-webkit-details-marker {
             display: none;
         }
+        /* 自訂表格捲軸樣式 */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
     </style>
 </head>
 <body class="text-gray-800 antialiased relative">
@@ -88,7 +103,7 @@
 
     <main class="max-w-6xl mx-auto px-4 py-12">
         
-        <!-- 品牌說明 Brand Intro -->
+        <!-- 品牌說明 Brand Intro (已更新文字) -->
         <div class="bg-white rounded-xl shadow-md p-8 mb-8 border-t-4 border-red-600">
             <h2 class="text-2xl font-bold text-gray-900 mb-5 flex items-center">
                 <span class="text-3xl mr-3">🎓</span> ROCKTAPE Taiwan｜國際培訓證書課程報名專區
@@ -122,7 +137,6 @@
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- 特點 1 -->
                 <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition duration-300">
                     <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
                         <span class="text-2xl mr-3">🌍</span> 1. 全球同步的 FMT 教育系統
@@ -131,7 +145,6 @@
                         ROCKTAPE 課程不是單一講師自行編寫，而是來自國際 FMT 教育架構，課程內容、操作邏輯與專業語言皆與全球系統同步。
                     </p>
                 </div>
-                <!-- 特點 2 -->
                 <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition duration-300">
                     <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
                         <span class="text-2xl mr-3">🔍</span> 2. 不只手法，而是評估與整合
@@ -140,7 +153,6 @@
                         我們不鼓勵「哪裡痛就處理哪裡」，而是從動作、筋膜、神經感覺、疼痛調節與功能表現出發，學會判斷什麼時候該用、怎麼用、如何搭配訓練與恢復。
                     </p>
                 </div>
-                <!-- 特點 3 -->
                 <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition duration-300">
                     <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
                         <span class="text-2xl mr-3">🛡️</span> 3. 工具使用更安全、更有邏輯
@@ -149,7 +161,6 @@
                         無論是拔罐、巫毒帶、筋膜刀或振動工具，真正的專業不是越痛越有效、越紅越有效、越深越有效，而是能掌握劑量、禁忌、適應症與個案反應。
                     </p>
                 </div>
-                <!-- 特點 4 -->
                 <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition duration-300">
                     <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
                         <span class="text-2xl mr-3">💼</span> 4. 適合專業工作者真正帶回現場
@@ -158,6 +169,71 @@
                         課程設計以實務應用為核心，適合物理治療師、運動防護員、健身教練、運動按摩師與各類運動專業工作者，能直接整合進臨床、訓練、賽事防護與個案服務。
                     </p>
                 </div>
+            </div>
+        </div>
+
+        <!-- 全新加入：課程比較表 -->
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8 mb-12 border-t-4 border-red-600">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center justify-center md:justify-start">
+                <span class="text-3xl mr-3">📊</span> ROCKTAPE Taiwan 國際培訓證書課程比較表
+            </h2>
+            
+            <div class="overflow-x-auto custom-scrollbar pb-4">
+                <table class="w-full text-left border-collapse min-w-[1000px]">
+                    <thead>
+                        <tr class="bg-gray-900 text-white text-sm md:text-base">
+                            <th class="p-4 rounded-tl-lg font-bold w-1/6">課程</th>
+                            <th class="p-4 font-bold">主軸定位</th>
+                            <th class="p-4 font-bold">適合誰先上</th>
+                            <th class="p-4 font-bold">主要解決什麼問題</th>
+                            <th class="p-4 font-bold">你會學到什麼</th>
+                            <th class="p-4 font-bold">現場應用場景</th>
+                            <th class="p-4 rounded-tr-lg font-bold">建議優先順序</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700 text-sm md:text-base">
+                        <!-- Row 1: Pods -->
+                        <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <td class="p-4 font-bold text-gray-900 leading-tight">RockPods & Glide<br><span class="text-xs text-gray-500 font-normal">肌筋膜軟拔罐認證課程</span></td>
+                            <td class="p-4">負壓減壓、筋膜滑動、疼痛調節</td>
+                            <td class="p-4">健身教練、物理治療師、運動防護員、運動按摩師</td>
+                            <td class="p-4">肩頸緊繃、下背不適、腿後側緊繃、組織滑動受限</td>
+                            <td class="p-4">定罐、滑罐、動態拔罐、安全操作與常見部位應用</td>
+                            <td class="p-4">運動按摩、訓練前活動度調整、課後恢復、臨床輔助處理</td>
+                            <td class="p-4 font-bold text-[#E31837]">最推薦入門第一堂</td>
+                        </tr>
+                        <!-- Row 2: Blades -->
+                        <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <td class="p-4 font-bold text-gray-900 leading-tight">RockBlades<br><span class="text-xs text-gray-500 font-normal">筋膜刀認證課程</span></td>
+                            <td class="p-4">IASTM 筋膜刀、軟組織處理、功能性評估</td>
+                            <td class="p-4">物理治療師、防護員、運動按摩師、進階教練</td>
+                            <td class="p-4">軟組織張力異常、活動度受限、疼痛與動作卡住</td>
+                            <td class="p-4">IASTM 原理與禁忌、上下肢與脊柱處理路徑、動作測試與功能評估</td>
+                            <td class="p-4">臨床治療、運動防護、按摩工作室、訓練後恢復</td>
+                            <td class="p-4 font-bold">適合已有身體處理經驗者</td>
+                        </tr>
+                        <!-- Row 3: Floss -->
+                        <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <td class="p-4 font-bold text-gray-900 leading-tight">RockFloss<br><span class="text-xs text-gray-500 font-normal">巫毒帶認證課程</span></td>
+                            <td class="p-4">關節活動度、壓力控制、動作整合</td>
+                            <td class="p-4">教練、治療師、防護員、跑者、重訓族、球類運動者</td>
+                            <td class="p-4">關節卡卡、活動度不足、訓練前準備不足、恢復效率低</td>
+                            <td class="p-4">Floss Band 壓力控制、肩髖膝踝包紮、搭配動作訓練、安全禁忌</td>
+                            <td class="p-4">健身房、跑步訓練、CrossFit、球類運動、運動前熱身</td>
+                            <td class="p-4 font-bold">教練與運動族群很適合優先學</td>
+                        </tr>
+                        <!-- Row 4: Vibration -->
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="p-4 font-bold text-gray-900 leading-tight rounded-bl-lg">Vibration Specialist<br><span class="text-xs text-gray-500 font-normal">振動專家認證課程</span></td>
+                            <td class="p-4">振動科學、疼痛感知、神經系統調節</td>
+                            <td class="p-4">治療師、教練、防護員、慢性疼痛處理工作者</td>
+                            <td class="p-4">慢性疼痛、動作功能障礙、神經敏感、身體威脅感過高</td>
+                            <td class="p-4">振動操作變數、振動拔罐、感知重塑、呼吸調節、自主神經與疼痛應用</td>
+                            <td class="p-4">慢性疼痛管理、臨床整合、進階恢復服務、高單價個案服務</td>
+                            <td class="p-4 font-bold rounded-br-lg">進階課程，適合作為工具系統升級</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -373,7 +449,6 @@
             </h2>
             <div class="space-y-4">
                 
-                <!-- Q1 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：沒有醫療背景可以報名嗎？</span>
@@ -386,7 +461,6 @@
                     </p>
                 </details>
 
-                <!-- Q2 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：課程是純理論還是實作？</span>
@@ -399,7 +473,6 @@
                     </p>
                 </details>
 
-                <!-- Q3 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：我已經會拔罐／筋膜刀，還需要上課嗎？</span>
@@ -412,7 +485,6 @@
                     </p>
                 </details>
 
-                <!-- Q4 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：不知道該報哪一堂怎麼辦？</span>
@@ -425,7 +497,6 @@
                     </p>
                 </details>
 
-                <!-- Q5 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：課程是否額滿怎麼確認？</span>
@@ -438,7 +509,6 @@
                     </p>
                 </details>
 
-                <!-- Q6 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：早鳥優惠到什麼時候？</span>
@@ -451,7 +521,6 @@
                     </p>
                 </details>
 
-                <!-- Q7 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：什麼時候會有其他縣市的場次？</span>
@@ -464,7 +533,6 @@
                     </p>
                 </details>
 
-                <!-- Q8 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：可以包班嗎？</span>
@@ -477,7 +545,6 @@
                     </p>
                 </details>
 
-                <!-- Q9 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：證書什麼時候發放？</span>
@@ -490,7 +557,6 @@
                     </p>
                 </details>
 
-                <!-- Q10 -->
                 <details class="group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <summary class="flex justify-between items-center font-bold cursor-pointer text-gray-800 text-lg hover:text-[#E31837] transition-colors outline-none">
                         <span>Q：課後可以買產品嗎？有優惠嗎？</span>
