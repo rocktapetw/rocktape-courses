@@ -103,7 +103,7 @@
 
     <main class="max-w-6xl mx-auto px-4 py-12">
         
-        <!-- 品牌說明 Brand Intro (已更新文字) -->
+        <!-- 品牌說明 Brand Intro -->
         <div class="bg-white rounded-xl shadow-md p-8 mb-8 border-t-4 border-red-600">
             <h2 class="text-2xl font-bold text-gray-900 mb-5 flex items-center">
                 <span class="text-3xl mr-3">🎓</span> ROCKTAPE Taiwan｜國際培訓證書課程報名專區
@@ -172,7 +172,7 @@
             </div>
         </div>
 
-        <!-- 全新加入：課程比較表 -->
+        <!-- 課程比較表 -->
         <div class="bg-white rounded-xl shadow-md p-6 md:p-8 mb-12 border-t-4 border-red-600">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center justify-center md:justify-start">
                 <span class="text-3xl mr-3">📊</span> ROCKTAPE Taiwan 國際培訓證書課程比較表
@@ -192,7 +192,6 @@
                         </tr>
                     </thead>
                     <tbody class="text-gray-700 text-sm md:text-base">
-                        <!-- Row 1: Pods -->
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <td class="p-4 font-bold text-gray-900 leading-tight">RockPods & Glide<br><span class="text-xs text-gray-500 font-normal">肌筋膜軟拔罐認證課程</span></td>
                             <td class="p-4">負壓減壓、筋膜滑動、疼痛調節</td>
@@ -202,7 +201,6 @@
                             <td class="p-4">運動按摩、訓練前活動度調整、課後恢復、臨床輔助處理</td>
                             <td class="p-4 font-bold text-[#E31837]">最推薦入門第一堂</td>
                         </tr>
-                        <!-- Row 2: Blades -->
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <td class="p-4 font-bold text-gray-900 leading-tight">RockBlades<br><span class="text-xs text-gray-500 font-normal">筋膜刀認證課程</span></td>
                             <td class="p-4">IASTM 筋膜刀、軟組織處理、功能性評估</td>
@@ -212,7 +210,6 @@
                             <td class="p-4">臨床治療、運動防護、按摩工作室、訓練後恢復</td>
                             <td class="p-4 font-bold">適合已有身體處理經驗者</td>
                         </tr>
-                        <!-- Row 3: Floss -->
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <td class="p-4 font-bold text-gray-900 leading-tight">RockFloss<br><span class="text-xs text-gray-500 font-normal">巫毒帶認證課程</span></td>
                             <td class="p-4">關節活動度、壓力控制、動作整合</td>
@@ -222,7 +219,6 @@
                             <td class="p-4">健身房、跑步訓練、CrossFit、球類運動、運動前熱身</td>
                             <td class="p-4 font-bold">教練與運動族群很適合優先學</td>
                         </tr>
-                        <!-- Row 4: Vibration -->
                         <tr class="hover:bg-gray-50 transition-colors">
                             <td class="p-4 font-bold text-gray-900 leading-tight rounded-bl-lg">Vibration Specialist<br><span class="text-xs text-gray-500 font-normal">振動專家認證課程</span></td>
                             <td class="p-4">振動科學、疼痛感知、神經系統調節</td>
@@ -276,19 +272,20 @@
                         </div>
                     </div>
                     <div class="mt-auto pt-4 border-t-2 border-gray-100">
-                        <!-- 加入名額倒數的 8/16 場次 -->
+                        <!-- 8/16 場次 (已額滿狀態) -->
                         <div class="mb-4">
-                            <p class="text-gray-700 font-bold mb-1 text-center">📅 2026/8/16 (日) - 台北場</p>
+                            <p class="text-gray-500 font-bold mb-1 text-center">📅 2026/8/16 (日) - 台北場</p>
                             <div class="text-center mb-2">
-                                <span class="inline-block bg-red-100 text-red-600 font-bold text-sm px-3 py-1 rounded animate-pulse shadow-sm">
-                                    🔥 最後 3 個名額
+                                <span class="inline-block bg-gray-200 text-gray-600 font-bold text-sm px-3 py-1 rounded shadow-sm">
+                                    已額滿
                                 </span>
                             </div>
-                            <a href="https://lihi1.me/RQ7F7" target="_blank" onclick="fbq('trackCustom', 'Click_Pods_0816'); dataLayer.push({'event': 'Click_Pods_0816'});" class="block text-center bg-rocktape-red hover-bg-rocktape-red text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md">
-                                👉 立即報名 (8/16)
-                            </a>
+                            <div class="block text-center bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed shadow-inner">
+                                🚫 已額滿 (8/16)
+                            </div>
                         </div>
                         <hr class="my-3 border-gray-100">
+                        <!-- 10/4 場次 -->
                         <div>
                             <p class="text-gray-700 font-bold mb-2 text-center">📅 2026/10/4 (日) - 台北場</p>
                             <a href="https://lihi.cc/8la0B" target="_blank" onclick="fbq('trackCustom', 'Click_Pods_1004'); dataLayer.push({'event': 'Click_Pods_1004'});" class="block text-center bg-gray-800 hover:bg-black text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md">
@@ -612,7 +609,7 @@
             <span class="text-lg tracking-wide">官方 IG</span>
         </a>
 
-        <!-- 懸浮 LINE 客服按鈕 (使用官方 SVG 圖片連結與白底綠字設計) -->
+        <!-- 懸浮 LINE 客服按鈕 -->
         <a href="https://lin.ee/AkHEnuo" target="_blank" class="bg-white text-[#00B900] border-2 border-[#00B900] hover:bg-gray-50 font-bold py-3 px-5 rounded-full shadow-2xl flex items-center gap-2 transition-transform transform hover:-translate-y-1">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="w-7 h-7">
             <span class="text-lg tracking-wide">課程諮詢</span>
